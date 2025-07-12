@@ -1,0 +1,139 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+
+.login-form{
+  width: 80vw;
+}
+
+.login-form > div{
+  margin: 1rem 0;
+}
+
+.login-img{
+  width: 60%;
+  height: auto;
+}
+
+.separator{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1rem 0;
+}
+.separator::before, .separator::after{
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--foreground);
+  margin: 0 1rem;
+}
+
+.login-img{
+  width: 30%;
+  height: auto;
+}
+
+.scroll-y{
+  overflow-y: auto;
+}
+
+.text-truncate{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 15ch;
+}
+
+.text-nowrap{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn{
+  padding: 10px !important;
+}
+
+.table-btn{
+  padding: 3px !important;
+}
+
+.skeleton-text{
+  width: 100%;
+  height: 70px;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  animation: shimmer 1.5s infinite;
+}
+.skeleton-btn{
+  width: 30%;
+  height: 70px;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  animation: shimmer 1.5s infinite;
+}
+
+.skeleton-card{
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+      background-color: #f0f0f0;
+  }
+  50% {
+      background-color: #e0e0e0;
+  }
+  100% {
+      background-color: #f0f0f0;
+  }
+}
+
+.search{
+  max-height: 45px;
+  max-width: 114px;
+}
